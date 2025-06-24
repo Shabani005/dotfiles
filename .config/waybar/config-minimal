@@ -1,0 +1,10 @@
+{
+  "modules-right": [
+    "custom/cpu-temp"
+  ],
+  "custom/cpu-temp": {
+    "format": "TEMP: {}",
+    "interval": 2,
+    "exec": "/home/shabani/.config/waybar/scripts/wb_cpu.sh"
+  }
+}
