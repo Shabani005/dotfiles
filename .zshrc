@@ -120,3 +120,6 @@ alias nvconf="nvim ~/.config/nvim/init.lua"
 export PATH="/home/shabani/.pixi/bin:$PATH"
 alias watt="sudo nvidia-smi -i 0 -pl"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias setup='git clone --bare https://github.com/Shabani005/dotfiles.git $HOME/.dotfiles'
+alias rsudo="faillock --reset"
+
