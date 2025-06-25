@@ -10,6 +10,8 @@
   "modules-left": [
     "custom/cworkspaces"
   ],
+  
+  "style":"~/.config/waybar/style.css",
 
   "modules-center": [
     "clock"
@@ -34,7 +36,7 @@
     "text": "hey",
     "format": "{}",
     "interval":1 ,
-    "exec": "/home/shabani/.config/waybar/scripts/custom-workspaces-icons.sh",
+    "exec": "~/.config/waybar/scripts/custom-workspaces-icons.sh",
     "tooltip": false,
     "class": "ws-style",
   },
@@ -48,7 +50,7 @@
     "text": "hey",
     "format": "cpu  {}°C",
     "interval": 5,
-    "exec": "/home/shabani/.config/waybar/scripts/wb_cpu.sh",
+    "exec": "~/.config/waybar/scripts/wb_cpu.sh",
     "tooltip": false
   },
   
@@ -56,7 +58,7 @@
     "text": "hey",
     "format": "gpu  {}°C",
     "interval": 5,
-    "exec": "/home/shabani/.config/waybar/scripts/wb_gpu.sh",
+    "exec": "~/.config/waybar/scripts/wb_gpu.sh",
     "tooltip": false
   },
 
@@ -91,7 +93,7 @@
 
   "network": {
     "format-wifi": "wifi {bandwidthDownBits}",
-    "format-ethernet": "enth {bandwidthDownBits}",
+    "format-ethernet": "eth {bandwidthDownBits}",
     "format-disconnected": "no network",
     "interval": 5,
     "tooltip": false
