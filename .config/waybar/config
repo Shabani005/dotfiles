@@ -8,7 +8,7 @@
   "margin-left": 8,
 
   "modules-left": [
-    "hyprland/workspaces"
+    "custom/cworkspaces"
   ],
 
   "modules-center": [
@@ -23,32 +23,20 @@
     "pulseaudio",
     "custom/cpu-temp",
     "custom/gpu-temp",
-    "custom/disk"
-  ],
+    "custom/disk",
+      ],
 
   "hyprland/window": {
     "separate-outputs": true
   },
 
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "*": 5
-    },
-    "format": "{icon}",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format-icons": {
-      "1": "ⵔ︎",
-      "2": "ⵔ︎",
-      "3": "ⵔ︎",
-      "4": "ⵔ︎",
-      "5": "ⵔ︎",
-      "urgent": "○︎",
-      "active": "◉︎",
-      "default": "ⵔ︎"
-    },
-    "all-outputs": "true",
-    "sort-by-number": "true"
+  "custom/cworkspaces": {
+    "text": "hey",
+    "format": "{}",
+    "interval":1 ,
+    "exec": "/home/shabani/.config/waybar/scripts/custom-workspaces-icons.sh",
+    "tooltip": false,
+    "class": "ws-style",
   },
 
   "tray": {
