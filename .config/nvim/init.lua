@@ -1,6 +1,9 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+
+vim.g.colorscheme = "everblush"
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -31,7 +34,20 @@ require("lazy").setup({
 require('lspconfig').pyright.setup({})
 --require('lspconfig').nim_langserver.setup({})
 
-require'lspconfig'.nim_langserver.setup{}
+require('lspconfig').nim_langserver.setup{}
+
+--require('lspconfig').deno.setup{}
+
+require('lspconfig').gopls.setup{}
+
+vim.opt.relativenumber = true
+
+require('lspconfig').clangd.setup {
+  -- You can add custom settings here
+  cmd = { "clangd", "--background-index" },
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_dir = require('lspconfig.util').root_pattern("compile_commands.json", ".git"),
+}
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
@@ -43,3 +59,11 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+return {
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+    lazy = false,
+  },
+} 

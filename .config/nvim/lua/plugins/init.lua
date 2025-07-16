@@ -12,6 +12,13 @@ return {
       require "configs.lspconfig"
     end,
   },
+  
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+    lazy = false,
+  },
+
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },

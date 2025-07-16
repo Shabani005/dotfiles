@@ -123,3 +123,8 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias setup='git clone --bare https://github.com/Shabani005/dotfiles.git $HOME/.dotfiles'
 alias rsudo="faillock --reset"
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/shabani/.lmstudio/bin"
+# End of LM Studio CLI section
+
