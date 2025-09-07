@@ -28,6 +28,8 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+vim.o.clipboard = "unnamedplus"
+
 -- personal addons / lsp configs
 
 --require('lspconfig').harper_ls.setup({})
@@ -40,12 +42,42 @@ require('lspconfig').nim_langserver.setup{}
 
 require('lspconfig').gopls.setup{}
 
+require('lspconfig').zls.setup{}
+
+require('lspconfig').asm_lsp.setup{}
+require('lspconfig').omnisharp.setup{
+  cmd = { "OmniSharp" }
+}
+
+-- vim.lsp.config('sonarlint') 
+
+-- require('lspconfig').c3lsp.setup{}
+
+require('lspconfig').c3_lsp.setup{}
+
+require('lspconfig').serve_d .setup{
+  cmd = {"serve-d"},
+  filetypes = {"d"}
+}
+
+
+
 vim.opt.relativenumber = true
+
+--require('lspconfig').c3lsp = {
+  --default_config = {
+    --cmd = { "/home/shabani/thirdparty/server/bin/release/c3lsp" },
+    --filetypes = { "c3" },
+    --root_dir = require('lspconfig.util').root_pattern("c3.toml", ".git"),
+  --}
+--}
+-- require('lspconfig').c3lsp.setup{}
+
 
 require('lspconfig').clangd.setup {
   -- You can add custom settings here
   cmd = { "clangd", "--background-index" },
-  filetypes = { "c", "cpp", "objc", "objcpp" },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cu" },
   root_dir = require('lspconfig.util').root_pattern("compile_commands.json", ".git"),
 }
 

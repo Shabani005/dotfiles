@@ -3,7 +3,6 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=/home/shabani/.nimble/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -103,28 +102,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias appzhr='source ~/.zshrc'
-alias editzhr='nvim ~/.zshrc'
-alias ll='ls -alF'
-alias gs='git status'
-alias gc='git commit'
-alias ga='git add'
-alias gp='git push'
-alias gpl='git pull'
-alias gco='git checkout'
-alias gbr='git branch'
-alias gcm='git commit -m'
-alias hpcfg='nvim ~/.config/hypr/hyprland.conf'
-alias alp="docker run --rm -it alpine sh"
-alias nvconf="nvim ~/.config/nvim/init.lua"
-export PATH="/home/shabani/.pixi/bin:$PATH"
-alias watt="sudo nvidia-smi -i 0 -pl"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias setup='git clone --bare https://github.com/Shabani005/dotfiles.git $HOME/.dotfiles'
-alias rsudo="faillock --reset"
+#
+export DISPLAY=:0
 
+alias bringnob="cp ~/projects/nobuild/nb.h ."
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/shabani/.lmstudio/bin"
-# End of LM Studio CLI section
+alias ur="~/projects/ccat/ur"
 
+alias fasm="/home/shabani/thirdparty/fasm/fasm.x64"
+
+export LD_LIBRARY_PATH=~/dependencies//cudnn-linux-x86_64-9.11.0.98_cuda12-archive/lib:$LD_LIBRARY_PATH
+export CPATH=~/dependencies/cudnn-linux-x86_64-9.11.0.98_cuda12-archive/include:$CPATH
+export PATH=~/.npm-global/bin:$PATH
+export CPATH="$HOME/thirdparty/llama.cpp/include:$CPATH"
+export CPATH="$HOME/thirdparty/llama.cpp/ggml/include/:$CPATH"
+
+export C3PATH="/home/shabani/thirdparty/server/bin/release:$PATH"
+
+export FASMPATH="/home/shabani/thirdparty/fasm/:$PATH"
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export LD_LIBRARY_PATH=$HOME/thirdparty/llama.cpp/build/bin:$LD_LIBRARY_PATH
+#export PATH="$PATH:/mnt/c/Users/hasan/AppData/Local/Programs/Microsoft VS Code/bin"

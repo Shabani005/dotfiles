@@ -20,6 +20,12 @@ return {
   },
 
 
+  {
+  "rcarriga/nvim-notify",
+  lazy = false,
+  },
+
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
