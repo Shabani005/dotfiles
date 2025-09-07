@@ -124,3 +124,5 @@ export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 export LD_LIBRARY_PATH=$HOME/thirdparty/llama.cpp/build/bin:$LD_LIBRARY_PATH
 #export PATH="$PATH:/mnt/c/Users/hasan/AppData/Local/Programs/Microsoft VS Code/bin"
+#
+alias alp="docker run --rm -it alpine sh"
