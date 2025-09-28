@@ -125,4 +125,7 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 export LD_LIBRARY_PATH=$HOME/thirdparty/llama.cpp/build/bin:$LD_LIBRARY_PATH
 #export PATH="$PATH:/mnt/c/Users/hasan/AppData/Local/Programs/Microsoft VS Code/bin"
 #
+alias em="emacs -nw"
 alias alp="docker run --rm -it alpine sh"
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

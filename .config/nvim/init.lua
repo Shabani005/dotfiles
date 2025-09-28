@@ -1,10 +1,14 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+vim.deprecate = function() return end
 
-vim.g.colorscheme = "everblush"
 
+-- vim.g.colorscheme = "gruber-darker"
+-- vim.g.set.guicursor =
+-- vim.cmd.colorscheme("gruber-darker")
 -- bootstrap lazy and all plugins
+vim.opt.guicursor = ""
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
 if not vim.uv.fs_stat(lazypath) then
@@ -15,7 +19,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
-
+local lspconfig = vim.lsp.config
 -- load plugins
 require("lazy").setup({
   {
@@ -28,13 +32,35 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+-- {
+--   "blazkowolf/gruber-darker.nvim",
+--   priority = 1000, -- Make sure it loads before other start plugins
+--   config = function()
+--     vim.cmd.colorscheme("gruber-darker")
+--   end,
+-- }
+
+-- { "blazkowolf/gruber-darker.nvim" }
+
 vim.o.clipboard = "unnamedplus"
 
 -- personal addons / lsp configs
 
 --require('lspconfig').harper_ls.setup({})
-require('lspconfig').pyright.setup({})
---require('lspconfig').nim_langserver.setup({})
+require("lspconfig").pyright.setup({})
+-- vim.lsp.config.pyright.setup({})
+require('lspconfig').nim_langserver.setup({})
+
+-- vim.lsp.config.pyright = {
+--   cmd = { "pyright-langserver", "--stdio" },
+--   root_dir = vim.fs.dirname(vim.fs.find(
+--     { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
+--     { upward = true }
+--   )[1]),
+-- }
+
+-- vim.lsp.start(vim.lsp.config.pyright)
+
 
 require('lspconfig').nim_langserver.setup{}
 
@@ -61,6 +87,7 @@ require('lspconfig').serve_d .setup{
 }
 
 
+require('lspconfig').rust_analyzer.setup{}
 
 vim.opt.relativenumber = true
 
@@ -99,3 +126,4 @@ return {
     lazy = false,
   },
 } 
+
