@@ -1,0 +1,6 @@
+theme = "gruber-darker"
+
+# [editor.clipboard]
+# provider = "custom"
+# copy = ["clip.exe"]
+# paste = ["powershell.exe", "-Command", "Get-Clipboard"]
