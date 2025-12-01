@@ -111,6 +111,8 @@ alias ur="~/projects/ccat/ur"
 
 alias fasm="/home/shabani/thirdparty/fasm/fasm.x64"
 
+alias tmacs="emacs -nw"
+
 export LD_LIBRARY_PATH=~/dependencies//cudnn-linux-x86_64-9.11.0.98_cuda12-archive/lib:$LD_LIBRARY_PATH
 export CPATH=~/dependencies/cudnn-linux-x86_64-9.11.0.98_cuda12-archive/include:$CPATH
 export PATH=~/.npm-global/bin:$PATH
@@ -131,3 +133,9 @@ alias alp="docker run --rm -it alpine sh"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export TERM=xterm-256color
 export COLORTERM=truecolor
+
+
+alias muslc=' gcc -static \
+  -isystem /opt/musl/include \
+  -L/opt/musl/lib \
+  -lc -lm'
