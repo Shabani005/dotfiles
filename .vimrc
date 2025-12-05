@@ -1,4 +1,4 @@
-colorscheme gruber
+colorscheme GruberDarker
 set clipboard=unnamedplus
 set relativenumber
 set number
