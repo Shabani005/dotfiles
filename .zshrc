@@ -128,7 +128,7 @@ export LD_LIBRARY_PATH=$HOME/thirdparty/llama.cpp/build/bin:$LD_LIBRARY_PATH
 #export PATH="$PATH:/mnt/c/Users/hasan/AppData/Local/Programs/Microsoft VS Code/bin"
 #
 alias em="emacs -nw"
-alias alp="docker run --rm -it alpine sh"
+alias alp="docker run --rm -it alpine sh" # TODO: add terminal colors
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export TERM=xterm-256color
