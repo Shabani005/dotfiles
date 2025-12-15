@@ -134,6 +134,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
+alias ptodos="glow ~/TODO.md"
 
 alias muslc=' gcc -static \
   -isystem /opt/musl/include \
