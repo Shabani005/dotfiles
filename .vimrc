@@ -1,3 +1,4 @@
+runtime defaults.vim
 colorscheme gruber
 set clipboard=unnamedplus
 set relativenumber
