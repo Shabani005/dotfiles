@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 export DISPLAY=:0
 
 alias bringnob="cp ~/projects/nobuild/nb.h ."
+alias bringch="cp ~/projects/chaos.h/chaos.h ."
 
 alias ur="~/projects/ccat/ur"
 
@@ -140,3 +141,8 @@ alias muslc=' gcc -static \
   -isystem /opt/musl/include \
   -L/opt/musl/lib \
   -lc -lm'
+
+# opencode
+export PATH=/home/shabani/.opencode/bin:$PATH
+
+[ -f "/home/shabani/.ghcup/env" ] && . "/home/shabani/.ghcup/env" # ghcup-env

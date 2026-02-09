@@ -1,6 +1,7 @@
 theme = "gruber-darker"
 
 [editor]
+default-yank-register = "+"
 line-number = "relative"
 auto-completion = true
 path-completion = true
@@ -8,9 +9,3 @@ completion-timeout = 250
 
 [keys.normal]
 C-i = "completion"
-
-[editor.clipboard-provider.custom]
-yank = { command = "win32yank.exe", args = ["-i", "--crlf"] }
-paste = { command = "win32yank.exe", args = ["-o", "--lf"] }
-primary-yank = { command = "win32yank.exe", args = ["-i", "--crlf"] }
-primary-paste = { command = "win32yank.exe", args = ["-o", "--lf"] }
